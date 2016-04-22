@@ -7,7 +7,7 @@ def weatherIncrement():
     temp = 0
     for t in range(0,101,5):
         weatherTempf = (1.8 * temp) + 32
-        print(temp, " Celsius is: " "\t", round(weatherTempf, 2), " Fahrenheit:")
+        print(temp, " Celsius is: " "\t", round(weatherTempf, 2), " Fahrenheit")
         temp += 5
 
 weatherIncrement()

@@ -11,7 +11,7 @@ def TodaysTemp():
         print(temperature,end=" ")
         print("degree(s) Fahrenheit = " ,end="")
         print(celsius,end="")
-        print("degree(s) Celsius.")
+        print(" degree(s) Celsius.")
         proceed = str(input("Do you wish to continue, Y or N? "))
         if proceed == "Y" or proceed== "y":
             continue_entry = True
