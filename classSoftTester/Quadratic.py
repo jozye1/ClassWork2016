@@ -1,7 +1,7 @@
-# Python Assignment 3.2
-# Author: Josue Merisier
-# Course: Software Tester
+# Python Assignment 3.2 - Quadratic Formula
 # Instructor:  Eduardo Hernandez
+# Course: Software Tester
+# Author: Josue Merisier
 
 def quadratic():
     print("")
@@ -16,12 +16,12 @@ def quadratic():
             valueC = int(input("Please enter a value for C: "))
             valueX = int(input("Please enter a value for X: "))
 
-            print("The following is the quadratic expression for the values entered:  ", end="")
+            print("The following expression is the quadratic formula for the values entered:  ", end="")
             print(valueA,"X^2+",valueB,"X+",valueC)
 
             quadraticFormula = float((valueA * valueX ** 2) + (valueB * valueX) + (valueC))
 
-            print("The value of the quadratic is: ", quadraticFormula)
+            print("The value of the quadratic expression is: ", quadraticFormula)
             print("")
         except:
             print("Please enter a valid integer: ", end="")

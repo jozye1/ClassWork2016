@@ -16,11 +16,15 @@ def getNamesAndColors():
         count +=1
         continuePlaying = str(input("Enter 'Q' or 'q' to quit. Any other character entered will continue the game: "))
 
-    if continuePlaying == "Q" or continuePlaying == "q":
-        exit = True
+        if continuePlaying == str("Q") or continuePlaying == str("q"):
+            exit = True
+        else:
+            exit = False
 
-    print(names[count], end=" ")
-    print("favorite color is: ", end="")
-    print(colors[count])
+    for info in range(0, count):
+        print("")
+        print(names[info], end="'s ")
+        print("favorite color is: ", end="")
+        print(colors[info])
 
 listings()
