@@ -2,6 +2,7 @@
 # Instructor:  Eduardo Hernandez
 # Course: Software Tester
 # Author: Josue Merisier
+# Date: 22 April 2016
 
 def quadratic():
     print("")

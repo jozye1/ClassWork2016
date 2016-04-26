@@ -2,6 +2,7 @@
 # Instructor:  Eduardo Hernandez
 # Course: Software Tester
 # Author: Josue Merisier
+# Date: 22 April 2016
 
 def userInput():
 
@@ -17,7 +18,7 @@ def userInput():
         enteredValues.append(int(input("Please enter an integer value: ")))
         count += 1
         #goOn = str(input("Do you wish to continue? Enter 'Q' or 'q' to quit, otherwise enter any other character to continue: "))
-        if iterationValue < 1:
+        if iterationValue == count:
             value = False
             break
         else:
@@ -27,6 +28,12 @@ def userInput():
     #if count >= 0 and count < 1000:
     for enteredData in range(0, count):
         print(enteredValues[enteredData], end=" ")
-        print("")
+        sorted enteredValues[enteredData]
+    print(enteredValues[enteredData])
+
+    print("")
+
+    print("The minimum or least number entered in the list is: ", enteredValues[0])
+    print("The maximum or largest number entered in the list is: ", enteredValues[count])
 
 userInput()
