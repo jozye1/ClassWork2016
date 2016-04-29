@@ -5,74 +5,83 @@
 # Date: 22 April 2016
 
 def userInputMain():
-    global iterationValue, goodData, enteredValues
     enteredValues = []
     iterationValue = 0
-#userInputMain()
-
-#def acceptableData():
-    global count
+    print("")
+    print("--THIS PROGRAM ALLOWS FOR ENTERING A LIST OF NUMBERS, THEN WILL SORT THE LIST AND SHOWS THE LOWEST & HIGHEST VALUE--")
     count = 0
     counter = 0
     goodData = True
     while goodData == True:
-        counter += 1
+        #counter += 1
         try:
             print("")
-            iterationValue = int(input("Please enter the number of times you wish to enter a value: "))
+            iterationValue = int(input("Please Enter The Number Of Times You Wish To Enter A Value: "))
             count += 1
-            goodData = False
+            #goodData = False
+            break
         except:
             print("")
-            print("This program only accepts numeric characters. ")
-            if count == 1:
-                counter = 3
-                count = 2
-                print("You have ", counter, " more chances to try again.")
-            elif count == 2:
+            if counter >= 0:
+                print("\tThis program only accepts numeric characters.")
+
+            if count <= 0:
                 counter = 2
+                count = 1
+                print("\tYou have",counter,"more chances to try again.")
+            elif count <= 1:
+                counter = 1
+                count = 2
+                print("\tYou have",counter,"more chance to try again.")
                 count = 3
-                print("You have ", counter, " more chance to try again.")
+                counter = -1
             elif count == 3:
-                print("1) We regret that you were not able to able to play & enjoy the game. Come back later.")
-                break
+                print("We regret that you're not willing to play & enjoy the game at this moment. Please come back later.")
+                print(
+                    "----------------------------------------------------------------------------------------------------------")
+                count = 0
                 return
 
-        if iterationValue <= 0:
-            return
-#acceptableData()
+    if iterationValue <= 0:
+        return
+    #----
 
-#def iterationCalculations():
-    #global count
     count = 0
     counter = 0
     while iterationValue >= 0:
-        counter += 1
+        #counter += 1
         try:
             print("")
-            enteredValues.append(int(input("Please enter a number: ")))
+            enteredValues.append(int(input("Please Enter A Number: ")))
             count += 1
-            if iterationValue < count:
+            if iterationValue <= count:
                 break
         except:
             print("")
-            print("This program only accepts numeric characters. ")
-            if count == 1:
-                counter = 3
-                print("You have ",counter," more chances to try again.")
-            elif count == 2:
+            if counter >= 0:
+                print("\tThis program only accepts numeric values.")
+
+            if count <= 0:
                 counter = 2
-                print("You have ", counter, " more chance to try again.")
+                count = 1
+                print("\tYou have",counter,"more opportunities to try again.")
+            elif count <= 1:
+                counter = 1
+                count = 2
+                print("\tYou have",counter,"more opportunity to try again.")
+                count = 3
+                counter = -1
             elif count == 3:
-                print("2) We regret that you were not able to able to play & enjoy the game. Come back later.")
-                break
+                print("We regret that you're not willing to continue playing & enjoying the game at this moment. Please come back later.")
+                print(
+                    "----------------------------------------------------------------------------------------------------------")
+                count = 0
+                return
 
-        if iterationValue <= 0:
-            return
-#iterationCalculations()
-userInputMain()
+    if iterationValue <= 0:
+        return
+    #------
 
-def printedResults():
     print("")
     print("This is the list of entered numbers: ", end="")
 
@@ -80,38 +89,40 @@ def printedResults():
         print(enteredValues[enteredData], end=" ")
     enteredValues.sort()
     print("")
-    print(enteredValues)
+    print("The numbers list sorted out: ",enteredValues)
 
     print("")
 
     print("The minimum or least number entered in the list is: ", enteredValues[0])
     print("The maximum or largest number entered in the list is: ", enteredValues[iterationValue -1])
+    print("----------------------------------------------------------------------------------------------------------")
 
-printedResults()
+    if iterationValue < 0:
+        return
+
+userInputMain()
+#------
 
 def repeatingProcess():
+
     keepingGoing = True
     while keepingGoing == True:
         print("")
-        goOn = str(input("Do you wish to continue? Enter 'Q' or 'q' to quit, otherwise enter any other character to continue: "))
+        goOn = str(input("|Do you wish to try again? Enter 'Q' or 'q' to quit, otherwise enter any other character to start over|: "))
+        print("==========================================================================================================")
         print("")
         if goOn == str("Q") or goOn == str("q"):
             goodData = False
             keepingGoing = False
             return
         else:
-            goodData = True
-            #acceptableData()
-            #iterationCalculations()
             userInputMain()
-            printedResults()
-            #keepingGoing = True
 
 repeatingProcess()
 
 print("")
-print("Thank you for taking part in our promotion! Please come back soon! Have a great day!!!")
-
+print("Thank you for taking part in our promotion! Please come back again soon! Have a great day!!!")
+print("")
 
 
 
