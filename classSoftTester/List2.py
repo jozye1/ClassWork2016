@@ -1,3 +1,9 @@
+# Python Programming Activity - Favorite Colors
+# Instructor:  Eduardo Hernandez
+# Course: Software Tester
+# Author: Josue Merisier
+# Date: 22 April 2016
+
 def listings():
     print("")
     print("This program accepts names and favorite colors, then prints a list of names along with their favorite colors.")

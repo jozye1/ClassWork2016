@@ -2,6 +2,7 @@
 # Instructor:  Eduardo Hernandez
 # Course: Software Tester
 # Author: Josue Merisier
+# Date: 22 April 2016
 
 def quadratic():
     print("")
@@ -23,16 +24,51 @@ def quadratic():
 
             print("The value of the quadratic expression is: ", quadraticFormula)
             print("")
+            noMore = str(input(
+            "Wish to test more values? 'Y' or 'y' to proceed, otherwise enter any other character to quit the game: "))
+            print(
+            "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+            print("")
+            if noMore == "Y" or noMore == "y":
+                # quadratic()
+                goOn = True
+            else:
+                return
         except:
-            print("Please enter a valid integer: ", end="")
-        noMore = str(input("Wish to test more values? Enter 'Y' or 'y' to proceed: "))
-        if noMore == "Y" or noMore == "y":
-            goOn = True
-        else:
-            goOn = False
-
-    print("")
-    print("I, Josue, thank you for your participation! Please come back again soon for more!")
-    print("")
-
+            print("")
+            print("Please enter a valid integer. Please try again.")
+            print("")
+            noMore = str(input(
+                "Wish to test more values? 'Y' or 'y' to proceed, otherwise enter any other character to quit the game: "))
+            print(
+                "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+            print("")
+            if noMore == "Y" or noMore == "y":
+                # quadratic()
+                goOn = True
+            else:
+                return
 quadratic()
+
+print("")
+print("I, Josue, thank you for your participation! Please come back again soon for more!")
+print("")
+
+
+'''def PlayAgain():
+    goOn2 = True
+    while goOn2 == True:
+        noMore = str(input("Wish to test more values? 'Y' or 'y' to proceed, otherwise enter any other character to quit the game: "))
+        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        if noMore == "Y" or noMore == "y":
+            quadratic()
+        else:
+            return
+PlayAgain()
+
+print("")
+print("I, Josue, thank you for your participation! Please come back again soon for more!")
+print("")
+
+#quadratic()
+#PlayAgain()'''
