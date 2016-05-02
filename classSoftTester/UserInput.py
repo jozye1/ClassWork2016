@@ -63,11 +63,11 @@ def userInputMain():
 
             if count <= 0:
                 counter = 2
-                count = 1
+                count += 1
                 print("\tYou have",counter,"more opportunities to try again.")
             elif count <= 1:
                 counter = 1
-                count = 2
+                count += 1
                 print("\tYou have",counter,"more opportunity to try again.")
                 count = 3
                 counter = -1
