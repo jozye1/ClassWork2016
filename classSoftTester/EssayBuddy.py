@@ -2,17 +2,14 @@ import sys
 
 def main():
     print("")
-    print(
-        "*************************************************************************************************************************")
-    print("\t\tWelcome To Taryn's & Josue's \'Essay Buddy\' Software Program."
-          "\nThis Program Will Assist You In Keeping Track With Your Words Count & Average In An Uploaded Essay In Text File Format."
-          "\n\t\tPlease Upload Your Text or \'.txt\' File Into The Program:"
-          "\n\tPlease Type In The Following Command To Begin, Example: python EssayBuddy.py YourEssay.txt."
-          "\n\t\tWhere, \'YourEssay.txt\', Will Be The Name Of Your Text File.")
-    print(
-        "*************************************************************************************************************************")
-    print(
-        "*************************************************************************************************************************")
+    print("******************************************************************************************************************************************")
+    print("\t\t\tWelcome To Taryn's & Josue's \'Essay Buddy\' Software Program."
+          "\nThis Program Will Assist You In Keeping Track With Your Words Count & Average, In An Uploaded English Language Essay In Text File Format."
+          "\n\t\t\tPlease Upload Your Text or \'.txt\' File Into The Program:"
+          "\n\t\tPlease Type In The Following Command To Begin, Example: python EssayBuddy.py YourEssay.txt."
+          "\n\t\t\tWhere, \'YourEssay.txt\', Will Be The Name Of Your Text File.")
+    print("******************************************************************************************************************************************")
+    print("******************************************************************************************************************************************")
     print("")
 
     readfile()
@@ -48,7 +45,7 @@ def checkfile(report):
 
     words=report.split()
     print("")
-    print(words)
+    #print(words)
     print("")
 
     validwords=0
@@ -61,9 +58,9 @@ def checkfile(report):
         if ((wordsLength >=4 and actualWord.isalpha()) or (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith(';')) or (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith('!')) or
            (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith('!!!')) or (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith(':')) or (wordsLength >=5 and actualWord.isalpha() + actualWord.endswith('...')) or
            (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith('.')) or (wordsLength >=6 and actualWord.isalpha() + actualWord.endswith('\'s')) or  (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith(' ')) or
-           (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith('?')) or (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith('???'))):
+           (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith('?')) or (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith(',')) or (wordsLength >=4 and actualWord.isalpha() + actualWord.endswith('???'))):
            validwords+=1
-           #print("***VALID WORDS***: ", actualWord)
+           print("***VALID WORDS***: ", actualWord)
         b+=1
 
     print("")
