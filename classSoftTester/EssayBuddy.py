@@ -39,7 +39,7 @@ def checkfile(report):
     endofsentence=0
     count=len(report)
     for a in range(0,count):
-        if report[a]=='.'or report[a]==','or report[a]=='!'or report[a]==';' or report[a]==':' or report[a]=='?':
+        if report[a]=='.'or report[a]=='!'or report[a]==';' or report[a]==':' or report[a]=='?':
             #print("Where special characters are found in the words of the report: ", report[a])
             endofsentence+=1
             #print("")
